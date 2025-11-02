@@ -1,0 +1,28 @@
+// VARIABLES
+@import "../scss/variables";
+
+// BASE
+@import "../base/reset";
+@import "../base/typography";
+@import "../base/utilities";
+
+// LAYOUT
+@import "../layout/header";
+@import "../layout/footer";
+@import "../layout/grid";
+
+// COMPONENTS
+@import "../components/buttons";
+@import "../components/animations";
+@import "../components/navbar";
+@import "../components/card";
+@import "../components/forms";
+
+// PAGES (estilos específicos de cada página)
+@import "../pages/home";
+@import "../pages/nosotros";  // <- importante
+@import "../pages/productos";
+@import "../pages/contacto";
+
+// RESPONSIVE
+@import "../scss/responsive";

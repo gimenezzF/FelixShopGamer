@@ -1,0 +1,116 @@
+/* ======================
+   NAVBAR GAMER
+====================== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  background-color: $color-secondary;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+  .logo {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-text;
+    text-transform: uppercase;
+
+    span {
+      color: $color-primary;
+      text-shadow: 0 0 10px $color-primary;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    li a {
+      color: $color-text;
+      font-weight: 500;
+      position: relative;
+      transition: color $transition-fast;
+
+      &:hover,
+      &.active {
+        color: $color-primary;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: $color-primary;
+          bottom: -4px;
+          left: 0;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    .cart-link {
+      font-size: 1.3rem;
+      color: $color-primary;
+      transition: transform $transition-fast;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: $color-text;
+    cursor: pointer;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: $breakpoint-md) {
+  .navbar {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color-secondary;
+      padding: 1.5rem 0;
+      transform: translateY(-120%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all $transition-slow;
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}

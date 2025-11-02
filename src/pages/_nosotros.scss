@@ -1,0 +1,25 @@
+.hero {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff00ff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+}

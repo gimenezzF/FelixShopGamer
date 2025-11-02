@@ -1,0 +1,24 @@
+/* CLASES AUXILIARES */
+.text-center {
+  text-align: center;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-secondary;
+  border: none;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-text;
+  }
+}

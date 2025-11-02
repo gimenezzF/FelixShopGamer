@@ -1,0 +1,18 @@
+/* TIPOGRAFÍA Y JERARQUÍAS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: $font-secondary;
+  font-size: 1rem;
+  color: $color-muted;
+  line-height: 1.6;
+}
+
+a:hover {
+  color: $color-primary;
+}
