@@ -1,0 +1,98 @@
+// ======================
+// SCSS RESPONSIVE
+// ======================
+
+// ======================
+// Media Queries Globales
+// ======================
+
+// Mobile first: hasta 768px
+@media (max-width: $breakpoint-md) {
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+    
+    .nav-links {
+      gap: 1rem;
+    }
+  }
+
+  .hero {
+    padding: 60px 20px;
+    
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .product-card {
+    .product-info {
+      h4 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .team-card,
+  .icon-box {
+    padding: 15px;
+  }
+}
+
+// Tablets: hasta 1024px
+@media (max-width: $breakpoint-lg) {
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .product-card {
+    .product-info {
+      h4 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

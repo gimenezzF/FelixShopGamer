@@ -1,0 +1,81 @@
+/* ======================
+   HOME PAGE STYLES
+====================== */
+
+/* Hero principal */
+.hero {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px 80px 20px;
+  position: relative;
+  overflow: hidden;
+
+  .hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    animation: neonText 2s ease-in-out infinite alternate;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+  }
+
+  .btn-primary {
+    margin-top: 2rem;
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+    }
+  }
+}
+
+/* Secciones destacadas */
+.section {
+  padding: 60px 0;
+
+  h2.section-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff00ff;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+  }
+
+  .section-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Animaciones */
+@keyframes neonText {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #00ffff; }
+  100% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff, 0 0 40px #00ffff; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

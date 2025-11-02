@@ -1,0 +1,38 @@
+// ======================
+// SCSS MIXINS
+// ======================
+
+// Mixin para flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin para centrado absoluto
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Mixin para transición
+@mixin transition($props: all, $duration: $transition-fast, $timing: ease) {
+  transition: $props $duration $timing;
+}
+
+// Mixin para border-radius
+@mixin border-radius($radius: 10px) {
+  border-radius: $radius;
+}
+
+// Mixin para responsive media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  }
+}

@@ -1,0 +1,39 @@
+/* ===== GRID Y UTILIDADES FLEXIBLE ===== */
+
+/* Contenedor principal centrado y responsivo */
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grids personalizadas */
+.grid {
+  display: grid;
+  gap: 2rem;
+
+  &-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Media queries para responsiveness */
+@media (max-width: $breakpoint-md) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

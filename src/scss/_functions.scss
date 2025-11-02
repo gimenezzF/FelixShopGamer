@@ -1,0 +1,28 @@
+// ======================
+// SCSS FUNCTIONS
+// ======================
+
+// Función para convertir px a rem según base 16px
+@function rem($pixels) {
+  @return #{$pixels / 16}rem;
+}
+
+// Función para calcular porcentaje
+@function percent($value, $total) {
+  @return ($value / $total) * 100%;
+}
+
+// Función para darken un color
+@function darken-color($color, $amount) {
+  @return darken($color, $amount);
+}
+
+// Función para lighten un color
+@function lighten-color($color, $amount) {
+  @return lighten($color, $amount);
+}
+
+// Función para calcular spacing modular
+@function spacing($factor) {
+  @return $factor * 8px;
+}

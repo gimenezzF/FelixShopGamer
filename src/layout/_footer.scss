@@ -1,0 +1,43 @@
+/* ===== FOOTER GAMER NEÓN ===== */
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: $color-text;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 2px solid $color-primary;
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: $color-muted;
+  }
+
+  a {
+    color: $color-primary;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: transform $transition-fast;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $color-accent;
+    }
+  }
+
+  .footer-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    a {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  .footer-credits {
+    font-size: 0.8rem;
+    color: $color-muted;
+  }
+}

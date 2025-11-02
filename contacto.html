@@ -13,30 +13,37 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- ===== HEADER / NAVBAR ===== -->
   <header class="header">
-    <nav class="navbar container">
-      <a href="index.html" class="logo">FeliShop<span>Gamer</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
-        <li><a href="carrito.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav class="navbar navbar-expand-lg container">
+      <a href="index.html" class="logo">FeliShop<span class="rgb-text">Gamer</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+              aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="carrito.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="hero text-center">
-    <h1 class="hero-title">Contáctanos</h1>
+    <h1 class="hero-title rgb-text">Contáctanos</h1>
     <p class="lead hero-subtitle">Estamos para ayudarte. Completa el formulario y nuestro equipo gamer te responderá lo antes posible.</p>
   </section>
 
   <!-- Formulario -->
   <section class="section container">
-    <h2 class="section-title">Formulario de Contacto</h2>
+    <h2 class="section-title rgb-text">Formulario de Contacto</h2>
     <div class="row justify-content-center">
       <div class="col-md-6">
         <form id="contact-form" class="contact-form">

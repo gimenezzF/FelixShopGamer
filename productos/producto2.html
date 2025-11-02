@@ -1,79 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Teclado Mecánico RGB gamer profesional en FeliShop.">
-  <meta name="keywords" content="teclado, gamer, RGB, FeliShop">
+  <meta name="description" content="ASUS ROG Azoth Extreme disponible en FeliShop. Diseño resistente, switches de precisión y retroiluminación RGB.">
+  <meta name="keywords" content="teclado mecánico, teclado gamer, RGB, FeliShop, periféricos">
   <meta name="author" content="FeliShop">
-  <title>FeliShop | Teclado Mecánico RGB</title>
+  <title>FeliShop | ASUS ROG Azoth Extreme</title>
+
+  <!-- FAVICON -->
   <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+
+  <!-- BOOTSTRAP CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS PERSONALIZADO -->
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <!-- Header / Navbar -->
+  <!-- ===== HEADER / NAVBAR ===== -->
   <header class="header">
-    <nav class="navbar container">
+    <nav class="navbar navbar-expand-lg container">
       <a href="../index.html" class="logo">FeliShop<span>Gamer</span></a>
-      <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../productos.html" class="active">Productos</a></li>
-        <li><a href="../nosotros.html">Nosotros</a></li>
-        <li><a href="../contacto.html">Contacto</a></li>
-        <li><a href="../carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+              aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../productos.html" class="active">Productos</a></li>
+          <li><a href="../nosotros.html">Nosotros</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+          <li><a href="../carrito.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <!-- Producto -->
+  <!-- ===== MAIN / PRODUCTO ===== -->
   <main class="container my-5">
-    <div class="row">
-      <!-- Slider de imágenes -->
-      <div class="col-md-6 mb-4">
-        <div id="carouselProducto" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../assets/img/teclado1.jpg" class="d-block w-100 rounded" alt="Teclado Mecánico RGB">
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/img/teclado2.jpg" class="d-block w-100 rounded" alt="Teclado Mecánico RGB">
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/img/teclado3.jpg" class="d-block w-100 rounded" alt="Teclado Mecánico RGB">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProducto" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProducto" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
-        </div>
+    <div class="row g-5">
+      <div class="col-md-6 text-center">
+        <img src="../assets/img/producto2.png" class="img-fluid rounded" alt="ASUS ROG Azoth Extreme">
       </div>
-
-      <!-- Información del producto -->
-      <div class="col-md-6 text-white">
-        <h1>Teclado Mecánico RGB</h1>
-        <h3 class="text-warning">$99.990</h3>
-        <p>Teclado mecánico con iluminación RGB personalizable y switches de alta durabilidad, ideal para largas sesiones de juego.</p>
-        <ul>
-          <li>Switches mecánicos duraderos</li>
-          <li>Iluminación RGB personalizable</li>
-          <li>Anti-ghosting y macros programables</li>
-        </ul>
-        <button class="btn btn-agregar btn-lg mt-3" onclick="agregarAlCarrito('Teclado Mecánico RGB', 99990)">
-          <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+      <div class="col-md-6">
+        <h1 class="text-white mb-3">ASUS ROG Azoth Extreme</h1>
+        <p class="text-white mb-4">Switches de precisión, diseño resistente y retroiluminación RGB para dominar cada partida. Ideal para gamers que buscan comodidad y rendimiento.</p>
+        <h3 class="text-white mb-3">$55.000</h3>
+        <button class="btn btn-primary add-to-cart"
+                data-id="teclado-rgb"
+                data-name="ASUS ROG Azoth Extreme"
+                data-price="55000"
+                data-img="../assets/img/producto2.jpg">
+          <i class="fas fa-cart-plus me-2"></i>Añadir al Carrito
         </button>
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer class="bg-black text-white py-4 mt-5">
     <div class="container text-center">
       <p class="mb-2">© 2025 FeliShop. Todos los derechos reservados.</p>
@@ -85,7 +77,10 @@
     </div>
   </footer>
 
+  <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS PERSONAL -->
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

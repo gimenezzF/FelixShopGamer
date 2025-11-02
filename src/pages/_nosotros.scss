@@ -1,3 +1,8 @@
+/* ==============================
+   NOSOTROS SCSS - FeliShop
+   ============================== */
+
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #fff;
@@ -7,19 +12,89 @@
   overflow: hidden;
 }
 
+/* Secciones generales */
 .section {
   padding: 60px 0;
 }
 
+/* Títulos de secciones */
 .section-title {
   font-family: 'Orbitron', sans-serif;
-  color: #ff00ff;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
 }
 
+/* Equipo / Card */
+.team-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ffff;
+  border-radius: 15px;
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ff00ff;
+  margin-bottom: 12px;
+}
+
+/* Icon-box (Misión, Visión, Historia) */
+.icon-box {
+  text-align: center;
+  padding: 26px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.icon-box i {
+  font-size: 2.6rem;
+  color: #00ffff;
+  margin-bottom: 12px;
+}
+.icon-box h4 {
+  margin-bottom: 8px;
+  color: #ff00ff;
+}
+.icon-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+}
+
+/* Body general */
 body {
   background-color: #1a1a1a;
   color: #fff;
+}
+
+/* ==============================
+   EFECTO RGB ANIMADO PARA TEXTOS
+   ============================== */
+.rgb-text {
+  background: linear-gradient(
+    90deg,
+    #ff0040, /* rojo */
+    #ff8c00, /* naranja */
+    #ffd500, /* amarillo */
+    #00d084, /* verde */
+    #00aaff, /* celeste */
+    #7b5cff  /* violeta */
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Webkit */
+  background-clip: text; /* otros navegadores */
+  color: transparent;
+  animation: rgbShift 3.5s linear infinite;
+  text-shadow: 0 0 8px rgba(0,0,0,0.12), 0 0 18px rgba(0,0,0,0.06);
+}
+
+@keyframes rgbShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

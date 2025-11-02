@@ -1,0 +1,43 @@
+// ======================
+// SCSS PLACEHOLDERS
+// ======================
+
+// Texto centrado
+%text-center {
+  text-align: center;
+}
+
+// Texto con neón
+%neon-text {
+  color: $color-primary;
+  text-shadow: 0 0 5px #fff, 0 0 10px $color-primary, 0 0 20px $color-accent;
+  font-family: $font-primary;
+  text-transform: uppercase;
+}
+
+// Botón base
+%btn-base {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  @include transition();
+}
+
+// Card base
+%card-base {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+// Input base
+%input-base {
+  background: #1a1a1a;
+  border: 2px solid $color-primary;
+  color: $color-text;
+  border-radius: 10px;
+  padding: 10px;
+  @include transition();
+}

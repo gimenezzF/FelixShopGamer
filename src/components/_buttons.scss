@@ -1,0 +1,53 @@
+/* ======================
+   BOTONES GAMER
+====================== */
+
+.btn {
+  font-family: $font-secondary;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+
+  &-primary {
+    background-color: $color-primary;
+    color: $color-secondary;
+    border-color: $color-primary;
+
+    &:hover {
+      background-color: $color-accent;
+      border-color: $color-accent;
+      color: $color-text;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px $color-primary, 0 0 25px $color-accent;
+    }
+  }
+
+  &-secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-secondary;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px $color-primary;
+    }
+  }
+
+  i {
+    transition: transform 0.3s;
+  }
+
+  &:hover i {
+    transform: rotate(15deg);
+  }
+}

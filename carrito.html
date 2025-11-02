@@ -7,26 +7,43 @@
   <meta name="keywords" content="carrito, compras, FeliShop, tienda gamer">
   <meta name="author" content="FeliShop">
   <title>FeliShop | Carrito de Compras</title>
-  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+  <!-- BOOTSTRAP CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- CSS PERSONALIZADO -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- ===== HEADER / NAVBAR ===== -->
   <header class="header">
-    <nav class="navbar container">
-      <a href="../index.html" class="logo">FeliShop<span>Gamer</span></a>
-      <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../productos.html">Productos</a></li>
-        <li><a href="../nosotros.html">Nosotros</a></li>
-        <li><a href="../contacto.html">Contacto</a></li>
-        <li><a href="../carrito.html" class="active cart-link"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav class="navbar navbar-expand-lg container">
+      <a href="index.html" class="logo">FeliShop<span>Gamer</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+              aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="carrito.html" class="active cart-link"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
+  <!-- ===== MAIN / CARRITO ===== -->
   <main class="container my-5">
     <h1 class="text-white mb-4">Carrito de Compras</h1>
 
@@ -42,26 +59,13 @@
           </tr>
         </thead>
         <tbody id="carrito-items">
-          <tr>
-            <td>Teclado Mecánico RGB</td>
-            <td><input type="number" value="1" min="1" class="form-control form-control-sm cantidad"></td>
-            <td>$79.990</td>
-            <td>$79.990</td>
-            <td><button class="btn btn-danger btn-sm eliminar"><i class="fas fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>Mouse Gamer RGB</td>
-            <td><input type="number" value="1" min="1" class="form-control form-control-sm cantidad"></td>
-            <td>$49.990</td>
-            <td>$49.990</td>
-            <td><button class="btn btn-danger btn-sm eliminar"><i class="fas fa-trash"></i></button></td>
-          </tr>
+          <!-- Se renderiza dinámicamente desde assets/js/main.js usando localStorage (felixCart) -->
         </tbody>
       </table>
     </div>
 
     <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap">
-      <h3 class="text-white">Total: $129.980</h3>
+      <h3 id="total-carrito" class="text-white">Total: $0</h3>
       <div class="mt-2 mt-md-0">
         <button class="btn btn-secondary me-2" id="vaciar-carrito"><i class="fas fa-trash-alt me-2"></i>Vaciar Carrito</button>
         <button class="btn btn-primary"><i class="fas fa-credit-card me-2"></i>Finalizar Compra</button>
@@ -69,6 +73,7 @@
     </div>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="bg-black text-white py-4 mt-5">
     <div class="container text-center">
       <p class="mb-2">© 2025 FeliShop. Todos los derechos reservados.</p>
@@ -80,37 +85,11 @@
     </div>
   </footer>
 
+  <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script>
-    // Script básico para eliminar productos del carrito
-    document.querySelectorAll('.eliminar').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.target.closest('tr').remove();
-        actualizarTotal();
-      });
-    });
 
-    // Actualizar subtotal y total al cambiar cantidad
-    document.querySelectorAll('.cantidad').forEach(input => {
-      input.addEventListener('input', () => actualizarTotal());
-    });
-
-    function actualizarTotal() {
-      let total = 0;
-      document.querySelectorAll('#carrito-items tr').forEach(tr => {
-        const cantidad = parseInt(tr.querySelector('.cantidad').value);
-        const precio = parseInt(tr.children[2].innerText.replace('$','').replace('.',''));
-        tr.children[3].innerText = `$${(precio * cantidad).toLocaleString()}`;
-        total += precio * cantidad;
-      });
-      document.querySelector('h3').innerText = `Total: $${total.toLocaleString()}`;
-    }
-
-    document.getElementById('vaciar-carrito').addEventListener('click', () => {
-      document.getElementById('carrito-items').innerHTML = '';
-      actualizarTotal();
-    });
-  </script>
+  <!-- JS PERSONAL -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+    
